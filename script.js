@@ -1,20 +1,28 @@
+// Code goes here
 var numSlides = 7; // total number of slides
+var width = 0; // width of a slide
+var curr = 0; //слайд который показываем current slide
 var slideList = document.querySelector("#s-list"); //all slides (UL)
+var slides = {}; // all slides in obj
+for (var i = 0; i < numSlides; i++) {
+  var tmp = '#slide-' + i;
+slides[i] = slideList.querySelector(tmp);
+};
 
-// крутит влево
+//начну с клика на точки
+function pointMove(pointid) {
+  tab(+pointid.id.slice(6));
+};
+
+//тупо крутит влево
 function rollLeft() {
   slideList.insertBefore(document.getElementById("s-list").lastChild, slideList.firstChild)
 }
-// крутит вправо
+//тупо крутит right
 function rollRight() {
   slideList.appendChild(document.getElementById("s-list").firstChild)
 }
-
-//слушает клики по точке с номером слайда
-function pointMove(pointid) {
-  tab(+pointid.id.slice(6));
-}
-//крутит до выбраного слайда
+//choose your slide
 function tab(num) {
   var id = slideList.firstChild.id.slice(6);
   
