@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link rel="stylesheet" href="style.css">
+    
+  </head>
+
+  <body>
+    <h3>Carousel v2</h1>
+    <div class="wrapper">
+      <div class="container">
+        <button id="Left" onclick="rollLeft()"><</button>
+        <div class="hide-other-slides">
+          <ul class="slide-list" id="s-list"><li id="slide-0">0</li><li id="slide-1">1</li><li id="slide-2">2</li><li id="slide-3">3</li><li id="slide-4">4</li><li id="slide-5">5</li><li id="slide-6">6</li></ul>
+        </div>
+        <button id="Right" onclick="rollRight()">></button>
+        <div class="points">
+          <ul class="points-list" id="p-list">
+            <li class="point" id="point-0" onclick="pointMove(this)">0</li>
+            <li class="point" id="point-1" onclick="pointMove(this)">1</li>
+            <li class="point" id="point-2" onclick="pointMove(this)">2</li>
+            <li class="point" id="point-3" onclick="pointMove(this)">3</li>
+            <li class="point" id="point-4" onclick="pointMove(this)">4</li>
+            <li class="point" id="point-5" onclick="pointMove(this)">5</li>
+            <li class="point" id="point-6" onclick="pointMove(this)">6</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <script src="script.js"></script>
+  </body>
+
+</html>
